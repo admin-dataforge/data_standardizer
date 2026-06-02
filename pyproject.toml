@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "data_standardizer"
+version = "0.1.0"
+dependencies = [
+    "bs4",
+    "pandas"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest"
+]
