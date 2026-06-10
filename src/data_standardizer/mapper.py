@@ -6,6 +6,8 @@ class DataMapper:
     @staticmethod
     def map_card(card):
 
+        print(".,,,,,,", card)
+
         lista_atributos = get_atributos(card)
         resultado_filtro = filtrar_atributos(lista_atributos)
         precio_str   =  get_precio_str(card)
