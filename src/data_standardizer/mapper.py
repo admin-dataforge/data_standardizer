@@ -3,11 +3,12 @@ from data_standardizer.filter import filtrar_atributos
 
 class DataMapper:
 
-    def map_card(self, card):
+    @staticmethod
+    def map_card(card):
 
         lista_atributos = get_atributos(card)
         resultado_filtro = filtrar_atributos(lista_atributos)
-        precio_str   =  get_precio_str(card),
+        precio_str   =  get_precio_str(card)
 
         return {
             "href" : get_href(card),

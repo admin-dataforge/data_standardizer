@@ -2,7 +2,8 @@ from bs4 import BeautifulSoup
 
 class DataParser:
 
-    def get_cards(self, html: str):
+    @staticmethod
+    def get_cards(html: str):
 
         soup = BeautifulSoup(html, "html.parser")
 
