@@ -16,5 +16,5 @@ def main(html_path: str,parquet_path:str):
     data_rows = [ DataMapper.map_card(card) for card in cards ]
 
     # 4. guardar los datos
-    Saver.guardar(parquet_path)
+    Saver.guardar(parquet_path,data_rows)
 
