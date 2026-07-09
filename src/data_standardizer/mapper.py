@@ -12,6 +12,8 @@ class DataMapper:
         resultado_filtro = filtrar_atributos(lista_atributos)
         precio_str   =  get_precio_str(card)
 
+        print(f"precio {precio_str}")
+
         if precio_str == None:
             return None
         else:
