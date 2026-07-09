@@ -13,7 +13,16 @@ def main(html_path: str,parquet_path:str):
     cards : BeautifulSoup = DataParser.get_cards(datos)
 
     # 3. pasar los datos
-    data_rows = [ DataMapper.map_card(card) for card in cards ]
+    #data_rows = [ DataMapper.map_card(card) for card in cards ]
+
+    data_rows = []
+
+    for card in cards:
+
+        resultado = DataMapper.map_card(card)
+
+        if resultado != None:
+            data_rows.append(resultado)
 
     # 4. guardar los datos
     Saver.guardar(parquet_path,data_rows)

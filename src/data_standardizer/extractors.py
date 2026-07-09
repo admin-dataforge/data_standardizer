@@ -46,13 +46,15 @@ def get_precio_str(card):
   """
   retorna el precio en str
   """
-  precio_str = "0.0"
+  precio_str = None
   try:
     precio_str = card.find_all("div", class_="property-card__detail-price")[0].get_text(strip=True)
+    return precio_str
   except Exception as e:
     print(f"error {e}")
+    return precio_str
 
-  return precio_str
+  
 
 def get_precio(precio_str):
   """
