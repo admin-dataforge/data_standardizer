@@ -15,8 +15,10 @@ class DataMapper:
         if precio_str == None:
             return None
         else:
+            href = get_href(card)
             return {
-                "href" : get_href(card),
+                "href" : href,
+                "id" : get_id(href),
                 "url_img" : get_url_img(card),
                 "alt_img" : get_alt_img(card),
                 "barrio" : get_barrio(card),

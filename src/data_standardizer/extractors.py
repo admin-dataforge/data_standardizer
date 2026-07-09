@@ -1,3 +1,5 @@
+import re
+
 def get_href(card):
   """
   retorna el href del inmueble tomado
@@ -103,3 +105,14 @@ def get_parq_cant(resultado_filtro):
   """
   parq_cant = resultado_filtro["parqueaderos"]
   return parq_cant
+
+def get_id(href:str):
+
+  match = re.search(r'(M[A-Z0-9]+)', href)
+
+  if match:
+      id_extraido = match.group(1)
+  else:
+      id_extraido = None
+  
+  return id_extraido
