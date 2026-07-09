@@ -54,7 +54,7 @@ def get_precio_str(card):
     return precio_str
   except Exception as e:
     print(f"error {e}")
-    return precio_str
+    return None
 
   
 
